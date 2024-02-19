@@ -5,7 +5,7 @@ function RegisteredCourses() {
     const [registeredCourses, setRegisteredCourses] = useState([]);
 
     useEffect(() => {
-        const studentId = 'your_student_id_here'; // Replace with actual student ID
+        const studentId = '100';
         axios.get(`/api/registered-courses/${studentId}`)
             .then(response => {
                 setRegisteredCourses(response.data);

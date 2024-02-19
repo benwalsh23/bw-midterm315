@@ -15,15 +15,14 @@ function AvailableCourses() {
     }, []);
 
     const handleEnroll = (courseId) => {
-        const studentId = 'your_student_id_here'; // Replace with actual student ID
+        const studentId = '100'; 
         axios.post('/api/register', { studentId, courseId })
             .then(response => {
-                alert(response.data.message); // You can replace this with a more user-friendly notification
-                // Optionally, you can update the state to remove the enrolled course from the list
+                alert(response.data.message); 
             })
             .catch(error => {
                 console.error('Error enrolling for course:', error);
-                alert(error.response.data.message); // Display error message to user
+                alert(error.response.data.message); 
             });
     };
 
